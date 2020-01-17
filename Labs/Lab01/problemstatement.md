@@ -1,5 +1,16 @@
 # Lab 01
-Create a folder called Lab01-LastName (where last name is your last name)
+Download the Windows-Template or MacLinux-Template file from Pilot.  This contains settings  
+for programming in VS Code.  Extract the file to a directory of your choice (such as CEG2170).  
+You will now have a folder named Template that contains:
+* .vscode
+* helloworld.c
+* Makefile
+
+Make a copy of the Template folder and name it Lab01-LastName (where last name is your last name)
+
+In Visual Studio Code, go to File, Open Folder, and open your 
+
+This link to [Introduction to C](https://www.cprogramming.com/tutorial/c/lesson1.html) is a good resource for the remainder of this lab.
 
 ## Part 1
 Create a program that reads in your name from standard in and prints your name to standard out.
@@ -13,7 +24,7 @@ Output format (replace John Smith with your name):
 ## Part 2
 Modify the above program so that it also reads a number from standard input and outputs the area  
 of a circle based on that input.  Set the value of pi to the nearest three decimal places with  
-`#define`.  You may use the `math.h` library
+`#define`.  You may use the `math.h` library.
 
 Formula: A = pi * r^2
 
