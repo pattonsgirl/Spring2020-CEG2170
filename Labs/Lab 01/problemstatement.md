@@ -1,11 +1,13 @@
 # Lab 01
 Create a folder called LastName-Lab01
 ## Part 1
-Create a program that reads in your name from standard in and prints your name to standard out.
-Input format:
+Create a program that reads in your name from standard in  
+and prints your name to standard out.
+
+Input format:  
 `Enter your name: `
 
-Output format (replace John Smith with your name):
+Output format (replace John Smith with your name):  
 `Your name is John Smith`
 
 ## Part 2
