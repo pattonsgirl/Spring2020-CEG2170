@@ -1,5 +1,5 @@
 # Lab 01
-Create a folder called LastName-Lab01
+Create a folder called Lab01-LastName
 ## Part 1
 Create a program that reads in your name from standard in and prints your name to standard out.
 
