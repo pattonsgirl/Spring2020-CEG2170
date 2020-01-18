@@ -20,7 +20,7 @@ To run from VS Code, use the shortcut Ctrl + Shift + C to open the Windows Comma
 The file path should be your project folder by default.
 
 Type `make run` - this will compile and run your code file.  
-If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](./..)
+If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](./../..)
 
 This link to [Introduction to C](https://www.cprogramming.com/tutorial/c/lesson1.html) is a good resource for the remainder of this lab.
 
