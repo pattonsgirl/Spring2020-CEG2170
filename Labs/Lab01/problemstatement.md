@@ -1,4 +1,7 @@
 # Lab 01
+
+## Getting Started
+
 Download the Windows-Template or MacLinux-Template file from Pilot.  This contains settings  
 for programming in VS Code.  Extract the file to a directory of your choice (such as CEG2170).  
 You will now have a folder named Template that contains:
@@ -8,7 +11,16 @@ You will now have a folder named Template that contains:
 
 Make a copy of the Template folder and name it Lab01-LastName (where last name is your last name)
 
-In Visual Studio Code, go to File, Open Folder, and open your 
+In Visual Studio Code, go to File, Open Folder, and open your folder (Lab01-LastName)
+
+Rename helloworld.c if desired.  If you rename it, be sure to update the Makefile variable PROGNAME  
+with the new name of your file.
+
+To run from VS Code, use the shortcut Ctrl + Shift + C to open the Windows Command Terminal.  
+The file path should be your project folder by default.
+
+Type `make run` - this will compile and run your code file.  
+If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](../..)
 
 This link to [Introduction to C](https://www.cprogramming.com/tutorial/c/lesson1.html) is a good resource for the remainder of this lab.
 
