@@ -1,2 +1,2 @@
-Examples\.vscode\*
-Examples\Makefile
+Examples/.vscode/*
+Examples/Makefile
