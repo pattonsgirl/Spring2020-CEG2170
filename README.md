@@ -47,3 +47,21 @@ Type `make` - if not previously installed, this will install make
 ### Linux (Ubuntu)
 Open your Terminal  
 Type `sudo apt install gcc make`
+
+## Using the Templates
+There are templates provided in Pilot and in the folders above.  
+
+The `.vscode` folder has a variety of files, the important one being `launch.json`  
+`launch.json` links your program to the Debugger in Visual Studio Code.  This will be important  
+as we learn loops and other functions where our variables change over time.
+
+`code.c` is a template code file.  It includes `stdio.h` and `main`.  If you change the name of `code.c`  
+you will need to update the `PROGNAME` variable in `Makefile`
+
+`Makefile` defines a simplified way to compile our program.  By default, the `Makefile` looks for a  
+code file called `code.c` and will create a program named `program.exe`.
+
+In cmd, assuming you are in your project path, you have three commands you can use.
+1. `make` - this will only compile your code.  It will not run it.
+2. `make run` - this will compile your code & run the program.
+3. `make clean` - this will delete your program.
