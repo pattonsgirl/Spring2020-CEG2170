@@ -48,6 +48,19 @@ Type `make` - if not previously installed, this will install make
 Open your Terminal  
 Type `sudo apt install gcc make`
 
+## Install Visual Studio Code
+[Download the version for your operating system](https://code.visualstudio.com/download).
+
+In Visual Studio Code, there is a top menu and a sidebar menu.  At the bottom of the top cluster in  
+the sidebar menu, select Extensions.  In the search bar at the top, type the letter `C`.  An option  
+should come up for a package named C/C++.  Click the green Install button.
+
+This tool gives us access to *IntelliSense*.  When you use Microsoft Word, it creates blue and red  
+underlines for grammar and error correction respectively.  Intellisense behaves similarly, but for  
+code.  If you see a red underline in your code, you likely have an error, according to IntelliSense.  
+IntelliSense can also give suggestions and usage guidelines.  Later, when we look more at functions  
+you will see IntelliSense creates reminders of what a functions expects and what it will return.
+
 ## Using the Templates
 There are templates provided in Pilot and in the folders above.  
 
