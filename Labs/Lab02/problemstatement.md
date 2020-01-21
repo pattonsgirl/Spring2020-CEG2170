@@ -1,4 +1,4 @@
-# Lab 01
+# Lab 02
 
 ## Getting Started
 
@@ -9,9 +9,9 @@ You will now have a folder named Template that contains:
 * code.c
 * Makefile
 
-Make a copy of the Template folder and name it Lab01-LastName (where last name is your last name)
+Make a copy of the Template folder and name it Lab02-LastName (where last name is your last name)
 
-In Visual Studio Code, go to File, Open Folder, and open your folder (Lab01-LastName)
+In Visual Studio Code, go to File, Open Folder, and open your folder (Lab02-LastName)
 
 Rename code.c if desired.  If you rename it, be sure to update the Makefile variable PROGNAME  
 with the new name of your file.
@@ -25,29 +25,7 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 This link to [Introduction to C](https://www.cprogramming.com/tutorial/c/lesson1.html) is a good resource for the remainder of this lab.
 
 ## Part 1
-Create a program that reads in your name from standard in and prints your name to standard out.  Use the `char` data type.  You program should expect a name length of less than 80 characters.  
-This is a good reference for [using scanf for a string of characters](https://www.tutorialspoint.com/c_standard_library/c_function_scanf.htm).
-
-Input format:  
-`Enter your name: `
-
-Output format (replace John Smith with your name):  
-`Your name is John Smith`
-
-## Part 2
-Modify the above program so that it also reads a number from standard input and outputs the area  
-of a circle based on that input.  Set the value of pi to the nearest three decimal places with  
-`#define`.  You may use the `math.h` library.
-
-Formula: A = pi * r^2
-
-Modified input format:  
-`Enter your name: `  
-`Enter the radius of your circle: `
-
-Modified output format:  
-`Your name is John Smith`  
-`38 is the area of your circle.`
+TDB
 
 Save your program output to a file named output.txt using copy & paste.  
 Learning opportunity: You could redirect your program output to the file output.txt
@@ -57,7 +35,7 @@ Your folder should have the following:
 name_of_your_code.c
 program.exe
 output.txt
-Create a .zip file of your project folder (Lab01-LastName.zip)
+Create a .zip file of your project folder (Lab02-LastName.zip)
 
 Windows:
 1. Choose the folder you'd like to zip.
