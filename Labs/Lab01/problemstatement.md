@@ -53,10 +53,9 @@ Save your program output to a file named output.txt using copy & paste.
 Learning opportunity: You could redirect your program output to the file output.txt
 
 ## What to Submit
-Your folder should have the following:
-name_of_your_code.c
-program.exe
-output.txt
+Your folder should have the following:  
+name_of_your_code.c  
+output.txt  
 Create a .zip file of your project folder (Lab01-LastName.zip)
 
 Windows:
