@@ -28,6 +28,7 @@ int main (void) {
     //  %d - expects an integer
     //  %f - expects a double or float
     //  %c - expects a character
+    //  %s - expects a string
     //  & - at the address of the variable, save the value given
     //      only use & for a normal variable, not an array
 
