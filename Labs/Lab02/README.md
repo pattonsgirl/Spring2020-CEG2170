@@ -9,9 +9,14 @@ You will now have a folder named Template that contains:
 * code.c
 * Makefile
 
-Make a copy of the Template folder and name it Lab02-LastName (where last name is your last name)
+**It is recommended to create a project folder for *each* part of this lab.**
+Folder structure:
+* Create a folder named Lab02-Lastname.  
+* Inside of Lab02, create two more folders (Part1 and Part2).
+* You can copy the files from the Template folder into Part1 and Part2   
 
-In Visual Studio Code, go to File, Open Folder, and open your folder (Lab02-LastName)
+In Visual Studio Code, go to File, Open Folder, and open the folder corresponding to which part of  
+this lab your are working on.
 
 Rename code.c if desired.  If you rename it, be sure to update the Makefile variable PROGNAME  
 with the new name of your file.
@@ -24,16 +29,16 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 
 This link to [Introduction to C](https://www.cprogramming.com/tutorial/c/lesson1.html) is a good resource for the remainder of this lab.
 
-## Part 1
-TDB
+## Part 1: Maximum of 3
+Write a 
 
-Take a screenshot of your program running, save it as a .jpeg please.  Learning opportunity: You could redirect your program output to the file output.txt
+## Part 2: Guessing Machine
+
 
 ## What to Submit
-Your folder should have the following:
-name_of_your_code.c
-program.exe
-output.txt
+You created two project folders, one for each part of this lab, inside of a master folder named Lab02-LastName.  
+Each folder should have at least the following:
+* name_of_your_code.c
 Create a .zip file of your project folder (Lab02-LastName.zip)
 
 Windows:
