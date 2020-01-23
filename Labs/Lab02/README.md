@@ -27,8 +27,7 @@ This link to [Introduction to C](https://www.cprogramming.com/tutorial/c/lesson1
 ## Part 1
 TDB
 
-Save your program output to a file named output.txt using copy & paste.  
-Learning opportunity: You could redirect your program output to the file output.txt
+Take a screenshot of your program running, save it as a .jpeg please.  Learning opportunity: You could redirect your program output to the file output.txt
 
 ## What to Submit
 Your folder should have the following:
