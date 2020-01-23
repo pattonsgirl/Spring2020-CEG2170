@@ -55,9 +55,8 @@ Learning opportunity: You could redirect your program output to the file output.
 ## What to Submit
 Your folder should have the following:  
 name_of_your_code.c  
-output.txt  
-Create a .zip file of your project folder (Lab01-LastName.zip)
 
+Not needed now, but how to create a zip:  
 Windows:
 1. Choose the folder you'd like to zip.
 2. Right-click the folder, point to Send to, and then click Compressed folder(zipped). 
