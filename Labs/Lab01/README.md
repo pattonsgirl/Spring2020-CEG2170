@@ -54,7 +54,7 @@ Learning opportunity: You could redirect your program output to the file output.
 
 ## What to Submit
 Your folder should have the following:  
-name_of_your_code.c  
+* name_of_your_code.c  
 
 Not needed now, but how to create a zip:  
 Windows:
