@@ -26,7 +26,7 @@ This link to [If-Else Statements in C](https://www.programiz.com/c-programming/c
 
 ## Earthquake Charactarization - If-Else Statements
 
-Write a program that determines the amount of damage projected based on an earthquake's Richter scale value.
+Write a program that determines the amount of damage projected based on an earthquake's Richter scale value.  Use a ladder style if-else statement to complete this lab.
 
 | Richter Scale Number (n)        | Characterization                                 |
 | --------------------------------|--------------------------------------------------|
