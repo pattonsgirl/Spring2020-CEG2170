@@ -2,7 +2,7 @@
 //  Before program is compiled, it will use #include to grab the library
 //  And #define to define "global" variables
 #include <stdio.h>  //standard input and output
-#define MAX = 89
+#define MAX 89
 
 /*
 * This program will print "Hello World" to console
