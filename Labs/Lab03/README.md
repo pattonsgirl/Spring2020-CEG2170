@@ -30,8 +30,9 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 This link to [Introduction to C](https://www.cprogramming.com/tutorial/c/lesson1.html) is a good resource for the remainder of this lab.
 
 ## Part 1:
-Find the greatest of 5 numbers using if/else or if/elseif/else statements.  Use scanf to read the numbers.  Numbers can have decimal values.
+Find the greatest of 3 numbers using if/else or if/elseif/else statements.  Use scanf to read the numbers.  Numbers can have decimal values.
 
+Use a switch statement to create a grade categorizer?
 
 ## Part 2:
 
