@@ -33,6 +33,7 @@ This link to [Introduction to C](https://www.cprogramming.com/tutorial/c/lesson1
 Find the greatest of 3 numbers using if/else or if/elseif/else statements.  Use scanf to read the numbers.  Numbers can have decimal values.
 
 Use a switch statement to create a grade categorizer?
+Switch statement for different parts of lab?
 
 ## Part 2:
 
