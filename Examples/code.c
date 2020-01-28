@@ -1,4 +1,5 @@
-#include <stdio.h>  //standard input and output
+#include <stdio.h>  //standard input and ouput
+#include <stdlib.h>  //needed to flush buffer
 #define MAX 89
 
 /*
@@ -12,11 +13,6 @@
 */
 
 int main (void) {
-    if(1){
-        printf("Hello world");
-    }
-
-    // example of checking user input with characters
-
+    
     return 0;
 }
