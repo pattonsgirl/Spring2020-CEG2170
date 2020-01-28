@@ -45,7 +45,8 @@ Make a basic calculator.  Your program will have 5 functions, `add_nums`, `subtr
 `div_nums`, and `mod_nums`.  These functions should expect doubles and print the result in the function  
 (your functions should not return a value).  Your `main` function will ask the user to pick a mathematical  
 operation to perform, and then prompt the user for two numbers.  Use a loop to check that the user has  
-entered a valid input.  Use a switch statment in you `main` to select the corresponding function.
+entered a valid input.  Use a switch statment in your `main` to call the function for the corresponding  
+character input.
 
 ### Sample execution:
 ```
