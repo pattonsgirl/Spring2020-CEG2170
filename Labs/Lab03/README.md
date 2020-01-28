@@ -87,6 +87,7 @@ Wow, you could lose 24 lbs over the next 6 months!
 You created two project folders, one for each part of this lab, inside of a master folder named Lab03-LastName.  
 Each folder should have at least the following:
 * name_of_your_code.c
+
 Create a .zip file of your project folder (Lab03-LastName.zip)
 
 Windows:

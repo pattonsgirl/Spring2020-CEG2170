@@ -1,4 +1,4 @@
-# Lab 04 - UNOFFICIAL, NOT FINALIZED
+# Lab 04
 
 ## Getting Started
 
@@ -29,8 +29,10 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 
 This link to [Functions in C](https://www.cprogramming.com/tutorial/c/lesson4.html) is a good resource for this lab.
 
-## Part 1:
-One foot equals 12 inches.  Write a function named feet_to_inches that accepts a number of feet as an argument and returns the number of inches in that many feet.  Use the function in a program the prompts the user to enter a number of feet then displays the number of inches in that many feet.
+## Part 1 - Using a Function to Return a Value:
+One foot equals 12 inches.  Write a function named `feet_to_inches` that accepts a number of feet  
+as an argument and returns the number of inches in that many feet.  Use the function in a program  
+the prompts the user to enter a number of feet then displays the number of inches in that many feet.
 
 ### Sample execution:
 ```
@@ -38,12 +40,33 @@ Enter the number of feet to convert to inches: 12
 The number of inches in 12 feet is 144
 ```
 
-## Part 2:
+## Part 2 - Using Switch Statements and Functions:
+Make a basic calculator.  Your program will have 5 functions, `add_nums`, `subtract_nums`, `mult_nums`,  
+`div_nums`, and `mod_nums`.  These functions should expect doubles and print the result in the function  
+(your functions should not return a value).  Your `main` function will ask the user to pick a mathematical  
+operation to perform, and then prompt the user for two numbers.  Use a loop to check that the user has  
+entered a valid input.  Use a switch statment in you `main` to select the corresponding function.
+
+### Sample execution:
+```
+Welcome to my calculator!
+a - addition
+s - subraction
+m - multiplication
+d - division
+o - modulo
+Enter the mathemical operation [a, s, m, d, o]: k
+Invalid input!
+Enter the mathemical operation [a, s, m, d, o]: a
+Enter two numbers (put a space between the numbers) and hit Enter: 4.5 9
+4.5 and 9 added together is 13.5
+```
 
 ## What to Submit
 You created two project folders, one for each part of this lab, inside of a master folder named Lab04-LastName.  
 Each folder should have at least the following:
-* name_of_your_code.c
+* name_of_your_code.c  
+
 Create a .zip file of your project folder (Lab04-LastName.zip)
 
 Windows:
