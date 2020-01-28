@@ -9,7 +9,7 @@ You will now have a folder named Template that contains:
 * code.c
 * Makefile
 
-**It is recommended to create a project folder for *each* part of this lab.**
+**It is recommended to create a project folder for *each* part of this lab.**  
 Folder structure:
 * Create a folder named Lab03-Lastname.  
 * Inside of Lab03, create two more folders (Part1 and Part2).
@@ -29,18 +29,21 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 
 This link to [Loops in C](https://www.cprogramming.com/tutorial/c/lesson3.html) is a good resource for this lab.
 
-## Part 1:
-Write a program that asks the user to enter a person’s age.  The program should display a message indicating whether the person is an infant, a child, a teenager, or an adult.  Have the program query the user on whether or not  they would like to enter another age (expect the user to enter “y” for yes).  Continue to run until the user inputs “n” for no.  Use a while loop to complete.
+## Part 1 - While Loops:
+Write a program that asks the user to enter a person’s age.  The program should display a message indicating  
+whether the person is an infant, a child, a teenager, or an adult.  Have the program query the user on whether  
+or not  they would like to enter another age (expect the user to enter “y” for yes).  Continue to run until  
+the user inputs “n” for no.
 
-The following are the conditions:
-If the person is 1 year old or less, they are an infant
-Output “Just a baby!”
-If the person is older than 1 year, but younger than 13 years, they are a child
-Output “Just a kid!”
-If the person is at least 13 years old, but less than 20 years old, they are a teenager
-Output “Get off my lawn!”
-If the person is at least 20 years old, they are an adult
-Output “You’re getting old!”
+The following are the conditions:  
+If the person is 1 year old or less, they are an infant  
+Output “Just a baby!”  
+If the person is older than 1 year, but younger than 13 years, they are a child  
+Output “Just a kid!”  
+If the person is at least 13 years old, but less than 20 years old, they are a teenager  
+Output “Get off my lawn!”  
+If the person is at least 20 years old, they are an adult  
+Output “You’re getting old!”  
 
 ### Sample execution:
 ```
@@ -58,8 +61,11 @@ Get off my lawn!
 Would you like to enter another number (y/n): n
 ```
 
-## Part 2 - Iterators, loops, running counters, formatting output:
-If a moderately active person cuts their calorie intake by 500 calories a day, they can typically lose about 4 pounds a month.  Write a program that lets the user enter their starting weight, then creates and displays a table showing what their expected weight will be at the end of each month for the next 6 months if they stay on this diet and provide an encouraging statement at the end.  Use a for loop to complete
+## Part 2 - For loops & formatting output:
+If a moderately active person cuts their calorie intake by 500 calories a day, they can typically lose about  
+4 pounds a month.  Write a program that lets the user enter their starting weight, then creates and displays  
+a table showing what their expected weight will be at the end of each month for the next 6 months if they  
+stay on this diet and provide an encouraging statement at the end.
 
 ### Sample execution:
 ```
