@@ -1,4 +1,4 @@
-# Lab 02
+# Lab 04 - UNOFFICIAL, NOT FINALIZED
 
 ## Getting Started
 
@@ -11,8 +11,8 @@ You will now have a folder named Template that contains:
 
 **It is recommended to create a project folder for *each* part of this lab.**
 Folder structure:
-* Create a folder named Lab02-Lastname.  
-* Inside of Lab02, create two more folders (Part1 and Part2).
+* Create a folder named Lab04-Lastname.  
+* Inside of Lab04, create two more folders (Part1 and Part2).
 * You can copy the files from the Template folder into Part1 and Part2   
 
 In Visual Studio Code, go to File, Open Folder, and open the folder corresponding to which part of  
@@ -27,15 +27,24 @@ The file path should be your project folder by default.
 Type `make run` - this will compile and run your code file.  
 If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](https://github.com/pattonsgirl/Spring2020-CEG2170)
 
-This link to [Introduction to C](https://www.cprogramming.com/tutorial/c/lesson1.html) is a good resource for the remainder of this lab.
+This link to [Functions in C](https://www.cprogramming.com/tutorial/c/lesson4.html) is a good resource for this lab.
 
-## Part 1 - Iterators, loops, running counters, formatting output:
+## Part 1:
+One foot equals 12 inches.  Write a function named feet_to_inches that accepts a number of feet as an argument and returns the number of inches in that many feet.  Use the function in a program the prompts the user to enter a number of feet then displays the number of inches in that many feet.
+
+### Sample execution:
+```
+Enter the number of feet to convert to inches: 12
+The number of inches in 12 feet is 144
+```
+
+## Part 2:
 
 ## What to Submit
-You created two project folders, one for each part of this lab, inside of a master folder named Lab02-LastName.  
+You created two project folders, one for each part of this lab, inside of a master folder named Lab04-LastName.  
 Each folder should have at least the following:
 * name_of_your_code.c
-Create a .zip file of your project folder (Lab02-LastName.zip)
+Create a .zip file of your project folder (Lab04-LastName.zip)
 
 Windows:
 1. Choose the folder you'd like to zip.
