@@ -12,3 +12,9 @@ Likewise, if one of these is terrible, let me know.
 ## Physical Books
 * Schaum's Outline of Programming with C 2nd Edition, Gottfried
 * Problem Solving and Program Design in C (8th Edition), Hanly & Koffman
+
+## Programming Practice
+These are some of the sites that post problems for people to solve.
+* [CodeChef](https://www.codechef.com/)
+* [HankerRank](https://www.hackerrank.com/dashboard)
+* [r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/) - in particular the ones labeled [Easy]
