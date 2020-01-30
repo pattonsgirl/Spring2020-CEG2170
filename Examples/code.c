@@ -23,46 +23,22 @@ Ask the user for a guess between 1 and 100​
         Print getting cold!​
 If the guess was out of bounds, print an error message​
 */
-
-    int answer = 50;
-    int guess = 0;
-    
-    printf("Make your guess (betweeen 0 and 100): ");
-    scanf("%d", &guess);
-    //check if guess is greater than or equal to 0 
-    //  AND check if guess is less than or equal to 100
-    if(guess >= 0 && guess <= 100){
-        //if the guess is in bounds, 
-        //we can now see if the guess was right
-        if (guess == answer) {
-            printf("That's right!");
-        }
-        //if I use the else statement commented out below, I get an error that says 
-        //  the x<y<z list does not have its mathematical meaning because we can't 
-        //  combine comparisons sometimes it will work anyways, but that's an exception, 
-        //  not a rule
-        //else if(answer - 5 < guess < answer || answer < guess < answer + 5)
-
-        //let's break this monster down
-        //My guess gets a special message if it is 5 too low OR (||) 5 too high
-        //  On each side of this OR, I need to check two things
-        //  For checking 5 too low, I am checking if my guess is greater then 5 below && less than the answer itself
-        //  For checking 5 too high, I am checking if my guess is less then 5 higher && greate than the answer itself
-        //else if(((answer - 5 < guess) && (guess < answer)) || ((answer < guess) && (guess < answer + 5))){
-        
-        //This is what we really need (this is called code optimization)
-        else if(answer - 5 < guess && guess < answer + 5){
-            printf("Getting hotter!");
-        }
-        //if the guess was in bounds, but was not the right answer (or close), 
-        //  it will be caught in our else
-        else {
-            printf("Getting colder :(");
-        }
+    int time = 0;
+    scanf("%d", &time);
+    //if time is between 0 /exclusively/ and 12 /exclusively/, print something
+    if(0 < time && time < 12){
+        printf("Good morning");
     }
-    //otherwise, the guess was out of bounds.
+    //otherwise if time is between 12 /inclusively/ and 18 /inclusively/, print something
+    else if (12 <= time && time <= 18){
+        printf("Good afternoon");
+    }
+    //otherwise if time is between 18 /inclusively/ and 24 /inclusively/, print something
+    else if(18 <= time && time <= 24){
+        printf("Good night!");
+    }
     else {
-        printf("Guess was out of bounds.");
+        printf("Time entered was not valid.");
     }
 
     return 0;

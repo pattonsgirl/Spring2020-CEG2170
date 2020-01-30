@@ -15,17 +15,17 @@
 
 int main (void) {
     int time = 0;
-    scanf("%d", time);
+    scanf("%d", &time);
     //if time is between 0 /exclusively/ and 12 /exclusively/, print something
-    if(0 < time < 12){
+    if(0 < time && time < 12){
         printf("Good morning");
     }
     //otherwise if time is between 12 /inclusively/ and 18 /inclusively/, print something
-    else if (12 <= time <= 18){
-        print("Good afternoon");
+    else if (12 <= time && time <= 18){
+        printf("Good afternoon");
     }
     //otherwise if time is between 18 /inclusively/ and 24 /inclusively/, print something
-    else if(18 <= time <= 24){
+    else if(18 <= time && time <= 24){
         printf("Good night!");
     }
     else {
