@@ -11,6 +11,7 @@ Likewise, if one of these is terrible, let me know.
 
 ## Physical Books
 * Schaum's Outline of Programming with C 2nd Edition, Gottfried
+* Head First C: A Brain-Friendly Guide, Griffiths
 * Problem Solving and Program Design in C (8th Edition), Hanly & Koffman
 
 ## Programming Practice
