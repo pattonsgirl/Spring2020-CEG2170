@@ -9,16 +9,8 @@ You will now have a folder named Template that contains:
 * code.c
 * Makefile
 
-<<<<<<< HEAD
 Folder structure:
 * Create a folder named Lab05-Lastname.
-=======
-**It is recommended to create a project folder for *each* part of this lab.**
-Folder structure:
-* Create a folder named Lab05-Lastname.  
-* Inside of Lab05, create two more folders (Part1 and Part2).
-* You can copy the files from the Template folder into Part1 and Part2   
->>>>>>> 29f45f1982319f5efc81e01ae16f08d8f2bff651
 
 In Visual Studio Code, go to File, Open Folder, and open the folder corresponding to which part of  
 this lab your are working on.
@@ -32,7 +24,6 @@ The file path should be your project folder by default.
 Type `make run` - this will compile and run your code file.  
 If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](https://github.com/pattonsgirl/Spring2020-CEG2170)
 
-<<<<<<< HEAD
 This link to [Arrays in C](https://www.tutorialspoint.com/cprogramming/c_arrays.htm) is a good resource for this lab.
 
 ## Hangman:
@@ -63,19 +54,6 @@ The folder should have at least the following:
 * name_of_your_code.c  
 
 Create a .zip file of your project folder (Lab05-LastName.zip)
-=======
-This link to [Functions in C](https://www.cprogramming.com/tutorial/c/lesson4.html) is a good resource for this lab.
-
-## Part 1 - Using a Function to Return a Value:
-
-
-## What to Submit
-You created two project folders, one for each part of this lab, inside of a master folder named Lab04-LastName.  
-Each folder should have at least the following:
-* name_of_your_code.c  
-
-Create a .zip file of your project folder (Lab04-LastName.zip)
->>>>>>> 29f45f1982319f5efc81e01ae16f08d8f2bff651
 
 Windows:
 1. Choose the folder you'd like to zip.
