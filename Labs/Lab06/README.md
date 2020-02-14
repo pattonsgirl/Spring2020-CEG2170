@@ -1,4 +1,4 @@
-# Lab 05
+# Lab 06
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ You will now have a folder named Template that contains:
 * Makefile
 
 Folder structure:
-* Create a folder named Lab05-Lastname.
+* Create a folder named Lab06-Lastname.
 
 In Visual Studio Code, go to File, Open Folder, and open the folder corresponding to which part of  
 this lab your are working on.
@@ -49,11 +49,11 @@ The word was: arm
 ```
 
 ## What to Submit
-You should have a folder named Lab05-LastName.  
+You should have a folder named Lab06-LastName.  
 The folder should have at least the following:
 * name_of_your_code.c  
 
-Create a .zip file of your project folder (Lab05-LastName.zip)
+Create a .zip file of your project folder (Lab06-LastName.zip)
 
 Windows:
 1. Choose the folder you'd like to zip.
