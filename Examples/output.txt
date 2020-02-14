@@ -1,0 +1,3 @@
+.\program.exe
+Area of ring is 219.13.\program.exe
+Area of ring is 219.13
