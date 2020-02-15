@@ -26,26 +26,11 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 
 This link to [Arrays in C](https://www.tutorialspoint.com/cprogramming/c_arrays.htm) is a good resource for this lab.
 
-## Hangman:
-Write a program to play a game of hangman.  Store the word to be guessed as individual characters of an  
-array called `word`.  The player must guess the letters belonging to `word`.  If the user enters a valid  
-letter, print a message of encouragement.  The program should end when the user successfully guesses the  
-word OR after 15 guesses.  Print the contents of the `word ` array at the end of the program.    
-
-*Hint*: Use an array called `guessed` to keep track of the solution so far.  Initialize all elements of  
-`guessed` to the symbol '`*`'.  Each time a letter in `word` is guessed, replace the corresponding '`*`'  
-in `guessed` with that letter.
+## Part 11:
 
 ### Sample execution:
 ```
-Let's play hangman!
-Enter a letter: a
-The letter a is in the word!
-Enter a letter: m
-The letter m is in the word!
-Enter a letter: r
-The letter r is in the word!
-The word was: arm
+Blah
 ```
 
 ## What to Submit

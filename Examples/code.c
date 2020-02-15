@@ -13,6 +13,8 @@ int main (void) {
     //set value for radius
     double inner_radius = 5.5;
     double outer_radius = 10.0;
+    scanf("%lf", &inner_radius);
+    scanf("%lf", &outer_radius);
 
     double inner_area = circle_area(inner_radius);
     double outer_area = circle_area(outer_radius);
