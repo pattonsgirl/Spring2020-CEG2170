@@ -36,7 +36,7 @@ Your functions should still have a return type of void.
 
 Your `main` needs to open a file called `input.txt`.  You will need to copy the contents into the file and  
 make sure it is in the same directory as your code.  You should read two lines at a time and perform corresponding  
-operations until end of file is reached.  For grading, we can test your code on a different input file, so it is  
+operations until you run out of lines.  For grading, we can test your code on a different input file, so it is  
 important to not limit your loop to only your version of `input.txt`.
 
 Use the output parameter from the function to print the resulting operation value in `main`.  In addition, write  

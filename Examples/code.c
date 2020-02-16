@@ -15,15 +15,22 @@ int main (void) {
     double inner_radius = 5.5;
     double outer_radius = 10.0;
     //scanf("%lf", &inner_radius);
-    //scanf("%lf", &outer_radius);
-    foo (10, 5);
-    printf("%d", 9%4);
+    //scanf("%lf", &outer_radius);    
 
     double inner_area = circle_area(inner_radius);
     double outer_area = circle_area(outer_radius);
     
     double ring_area = outer_area - inner_area;
-    printf("Area of ring is %.2lf", ring_area);
+    //if I forget to use the &, it will throw a compilation error
+    double *ringp = &ring_area;
+    printf("Area of ring is %.2lf\n", ring_area);
+    printf("Address of the variable ring_area is %p\n", &ring_area);
+    printf("Address stored by pointer: %p\n", ringp);
+    printf("Value that the pointer points to: %lf\n", *ringp);
+    // be careful, and don't do this. What we are doing here is looking up the 
+    //  address of the pointer ringp, which is not the same thing as pointing to
+    // the address or contents of ring_area
+    printf("Address value of the pointer: %p", &ringp);
   
     return 0;
 }
