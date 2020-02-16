@@ -24,16 +24,23 @@ The file path should be your project folder by default.
 Type `make run` - this will compile and run your code file.  
 If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](https://github.com/pattonsgirl/Spring2020-CEG2170)
 
-This link to [Pointers & Functions in C](https://www.guru99.com/c-function-pointers.html) is a good resource for this lab.
+These links to [Pointers & Functions in C](https://www.guru99.com/c-function-pointers.html) and [Files in C](https://www.geeksforgeeks.org/basics-file-handling-c/) are good resources for this lab.
 
 ## Part 1 - Reading from Files & Playing with Pointers:
-Lab 04 had you make a basic calculator.  This lab is going to add some additional feature requirements.  Feel free to reuse your code and make modifications or start from scratch.  
+Lab 04 had you make a basic calculator.  This lab is going to add some additional feature requirements.  
+Feel free to reuse your code and make modifications or start from scratch.  
 
-Your program will have 5 functions, `add_nums`, `subtract_nums`, `mult_nums`, `div_nums`, and `mod_nums`.  These functions should expect two input parameters of type double and one output parameter of type double.  Your functions should still have a return type of void.
+Your program will have 5 functions, `add_nums`, `subtract_nums`, `mult_nums`, `div_nums`, and `mod_nums`.  
+These functions should expect two input parameters of type double and one output parameter of type double.  
+Your functions should still have a return type of void.
 
-Your `main` needs to open a file called `input.txt`.  You will need to copy the contents into the file and make sure it is in the same directory as your code.  You should read two lines at a time and perform corresponding operations until end of file is reached.  For grading, we can test your code on a different input file, so it is important to not limit your loop to only your version of `input.txt`.
+Your `main` needs to open a file called `input.txt`.  You will need to copy the contents into the file and  
+make sure it is in the same directory as your code.  You should read two lines at a time and perform corresponding  
+operations until end of file is reached.  For grading, we can test your code on a different input file, so it is  
+important to not limit your loop to only your version of `input.txt`.
 
-Use the output parameter from the function to print the resulting operation value in `main`.  In addition, write the corresponding output to a file called `output.txt`.
+Use the output parameter from the function to print the resulting operation value in `main`.  In addition, write  
+the corresponding output to a file called `output.txt`.
 
 ### input.txt:
 ```
