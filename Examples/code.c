@@ -34,6 +34,7 @@ int main (void) {
     //writing out down here where ring_area is defined
     fprintf(outputp, "The out was %lf\n the inner was %lf\n \
     ring area is %lf", outer_area, inner_area, ring_area);
+    printf("Hi!");
 
     //if I forget to use the &, it will throw a compilation error
     double *ringp = &ring_area;

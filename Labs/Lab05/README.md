@@ -35,7 +35,7 @@ These functions should expect two input parameters of type double and one output
 Your functions should still have a return type of void.
 
 Your `main` needs to open a file called `input.txt`.  You will need to copy the contents into the file and  
-make sure it is in the same directory as your code.  You should read two lines at a time and perform corresponding  
+make sure it is in the same directory as your code.  You should read one line at a time and perform corresponding  
 operations until you run out of lines.  For grading, we can test your code on a different input file, so it is  
 important to not limit your loop to only your version of `input.txt`.
 
@@ -44,16 +44,11 @@ the corresponding output to a file called `output.txt`.
 
 ### input.txt:
 ```
-a
-3 7
-s
-9 3
-m
-3 4
-d
-90 9
-o
-9 4 
+a 3 7
+s 9 3
+m 3 4
+d 90 9
+o 9 4 
 ```
 
 ### Sample Program Execution & Contents of output.txt:
