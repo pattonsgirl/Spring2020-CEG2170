@@ -46,7 +46,7 @@ Type `make` - if not previously installed, this will install make
 
 ### Linux (Ubuntu)
 Open your Terminal  
-Type `sudo apt install gcc make`
+Type `sudo apt install gcc g++ make`
 
 ## Install Visual Studio Code
 [Download the version for your operating system](https://code.visualstudio.com/download).
