@@ -9,14 +9,11 @@ You will now have a folder named Template that contains:
 * code.c
 * Makefile
 
-**It is recommended to create a project folder for *each* part of this lab.**
 Folder structure:
 * Create a folder named Lab06-Lastname.  
-* Inside of Lab06, create two more folders (Part1 and Part2).
-* You can copy the files from the Template folder into Part1 and Part2   
+* You can copy the files from the Template folder into the folder 
 
-In Visual Studio Code, go to File, Open Folder, and open the folder corresponding to which part of  
-this lab your are working on.
+In Visual Studio Code, go to File, Open Folder, and open the folder corresponding to this lab.
 
 Rename code.c if desired.  If you rename it, be sure to update the Makefile variable PROGNAME  
 with the new name of your file.
@@ -27,40 +24,48 @@ The file path should be your project folder by default.
 Type `make run` - this will compile and run your code file.  
 If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](https://github.com/pattonsgirl/Spring2020-CEG2170)
 
-This link to [Functions in C](https://www.cprogramming.com/tutorial/c/lesson4.html) is a good resource for this lab.
+[Sorting Arrays](https://www.geeksforgeeks.org/c-program-to-sort-an-array-in-ascending-order/), [How to Use sscanf()](https://www.tutorialspoint.com/c_standard_library/c_function_sscanf.htm), [Mean, Median, and Mode](https://www.purplemath.com/modules/meanmode.htm) are good resources for this lab.
 
-## Part 1 - Using a Function to Return a Value:
-One foot equals 12 inches.  Write a function named `feet_to_inches` that accepts a number of feet  
-as an argument and returns the number of inches in that many feet.  Use the function in a program  
-the prompts the user to enter a number of feet then displays the number of inches in that many feet.
+**Instructor note**: I am well aware that there are a lot of solutions to sorting arrays online  
+(including in the resource provided).  Therefore, you **must** comment your code for this assignment  
+to prove understanding.
+
+## Part 1 - Get an Array:
+Write a program that requests 5 integers from the user and stores them in an array.
+
+## Part 2 - Find the Mean:
+Add a function to the program, called `get_mean` that determines the *mean*, which is the average of  
+the values.  The function should be passed the array and the size of the array, but use `const` so that  
+it cannot be changed, only accessed.  It should return a double, which is the calculated *mean*.  The  
+`main` function will print the value.
+
+```
+//Function prototype:
+double get_mean(int [], int);
+```
+
+## Part 3 - Sort the Array:
+Create a function called `sort_array`.  The function should be passed the array and the size of the  
+array.  The function does not return a value; the array is changed by the function.  The `main`  
+function will print the sorted array (you may create a print array function if desired).
+
+**Instructor note**: I am well aware that there are a lot of solutions to sorting arrays online  
+(including in the resource provided).  Therefore, you **must** comment your code for this assignment  
+to prove understanding.
+
+```
+//Function prototype:
+void sort_array(int [], int);
+```
 
 ### Sample execution:
 ```
-Enter the number of feet to convert to inches: 12
-The number of inches in 12 feet is 144
-```
-
-## Part 2 - Using Switch Statements and Functions:
-Make a basic calculator.  Your program will have 5 functions, `add_nums`, `subtract_nums`, `mult_nums`,  
-`div_nums`, and `mod_nums`.  These functions should expect doubles and print the result in the function  
-(your functions should not return a value).  Your `main` function will ask the user to pick a mathematical  
-operation to perform, and then prompt the user for two numbers.  Use a loop to check that the user has  
-entered a valid input.  Use a switch statment in your `main` to call the function for the corresponding  
-character input.
-
-### Sample execution:
-```
-Welcome to my calculator!
-a - addition
-s - subraction
-m - multiplication
-d - division
-o - modulo
-Enter the mathemical operation [a, s, m, d, o]: k
-Invalid input!
-Enter the mathemical operation [a, s, m, d, o]: a
-Enter two numbers (put a space between the numbers) and hit Enter: 4.5 9
-4.5 and 9 added together is 13.5
+Part 1 - Enter 5 integers, each separated by a space: 
+5 9 2 7 3
+Part 2 - Mean of Array: 
+5.2
+Part 3 - Sorted Array:
+2 3 5 7 9
 ```
 
 ## What to Submit
