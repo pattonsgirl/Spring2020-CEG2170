@@ -6,7 +6,7 @@ void print_array(int [], int);
 
 int main (void){
     //initialize an array, method one:
-    int num_list[] = {3, 5, 2, 1, 5, 3};
+    int num_list[5];
     //method two, where 6 is the size of the array we want to make
     //int num_list[6];
     int size;
@@ -43,6 +43,8 @@ int main (void){
     return 0;
 }
 
+//note: functions should be as generic as possible
+//  that is why we shouldn't set the size in the brackets
 //this function prints an array
 void print_array(int a[], int size){
     for (int i = 0; i < size; i++){
