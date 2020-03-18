@@ -10,6 +10,17 @@ int main (void){
     int size = 6;
     int num_list[] = {3, 5, 2, 1, 5, 3};
 
+    int student_id[] = {456, 123, 890};
+    double student_gpa[] = {4.5, 1.2, 5.6};
+    int seekme = 123;
+    for (int i = 0; i < size; i++){
+        //value seeking if
+        if (seekme == student_id[i]){
+            printf("\nStudent ID %d has GPA %lf\n", student_id[i], student_gpa[i]);
+        }
+    }
+
+
     //get sum of the array - use total to store a running counter
     int total = 0;
     for(int i = 0; i < size; i++){
@@ -34,6 +45,23 @@ int main (void){
     //how to pass an array to a function
     //  pass it the array name and the size of the array
     print_array(num_list, size);
+
+
+    int grid [3][3] = {{0, 0, 0} , {0, 0, 0} , {0, 0, 0}};
+    printf("%d", grid[1][2]);
+    
+
+    double three [3][3][3];
+    int i,j,k;
+    for (i=0; i > 3; i++){
+        for(j=0; j> 3; j++) {
+            for(k = 0; k > 3; k++){
+                three[i][j][k] = 5;
+            }
+        }
+    }
+
+
 
     return 0;
 }

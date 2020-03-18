@@ -31,7 +31,9 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 to prove understanding.
 
 ## Part 1 - Get an Array:
-Write a program that requests 5 integers from the user and stores them in an array.
+Write a program that requests 5 integers from the user and stores them in an array.  You  
+may do this with either a for loop OR by using sscanf to store formatted input in each  
+spot in the array.
 
 ## Part 2 - Find the Mean:
 Add a function to the program, called `get_mean` that determines the *mean*, which is the average of  
@@ -58,10 +60,23 @@ to prove understanding.
 void sort_array(int [], int);
 ```
 
-### Sample execution:
+### Sample execution using sscanf:
 ```
 Part 1 - Enter 5 integers, each separated by a space: 
 5 9 2 7 3
+Part 2 - Mean of Array: 
+5.2
+Part 3 - Sorted Array:
+2 3 5 7 9
+```
+### Sample execution using for loop:
+```
+Part 1 - Enter 5 integers, hit return after each input: 
+5
+9
+2
+7
+3
 Part 2 - Mean of Array: 
 5.2
 Part 3 - Sorted Array:
