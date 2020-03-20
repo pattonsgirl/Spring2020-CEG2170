@@ -1,21 +1,34 @@
 #include <stdio.h>
 #include <math.h>
 
+#define MAXCOL 5
+
 //pass array and size of the array
 void print_array(const int [], int);
-void sort_array(int [], int);
+void print_2D_array (const int [][MAXCOL], int, int);
 
 int main (void){
-    //initialize a 2D array, method one:
+    double num [9] = {6.7};
+    char name [5] = {"Kayleigh "};
 
-    //method two:
-    
+    printf("%s", name);
 
-    //how to pass an array to a function
-    //  pass it the array name and the size of the array
-    //print_array(num_list, size);
+    int size = sizeof(name) / sizeof(name[0]);
+    for (int i = 0; i < size; i++){
+        printf("%c\n", name[i]);
+    }
 
     return 0;
+}
+
+void print_2D_array (const int a[][MAXCOL], int x, int y){
+     for (int row = 0; row < x; row++){
+        for (int col = 0; col < y; col++){
+            printf("%d ", a[row][col]);
+        }
+        printf("\n");
+    }
+    return;
 }
 
 //this function prints an array - but only a 1D array - look at the brackets
