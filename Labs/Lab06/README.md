@@ -43,7 +43,7 @@ it cannot be changed, only accessed.  It should return a double, which is the ca
 
 ```
 //Function prototype:
-double get_mean(int [], int);
+double get_mean(const int [], int);
 ```
 
 ## Part 3 - Sort the Array:
