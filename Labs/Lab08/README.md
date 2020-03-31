@@ -26,32 +26,62 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 
 This link to [Arrays in C](https://www.tutorialspoint.com/cprogramming/c_arrays.htm) is a good resource for this lab.
 
-## 
-Create a database file
-Functions:
-Read in from file
-Print out contents
+## My Manual DNS (Domain Name Server)
+IPv4 internet addresses are of the form:
+```
+AAA.BBB.CCC.DDD
+```
+Where each letter represents a sectioned "subnet".  Computers also have an associated hostname.  
+For fun, you can find out your computer's hostname by opening a terminal and typing `hostname`.  
+You are going to write a program that identifies which computers are on the same class of subnet.  
+
+### Goal Post 1 (25%):
+Create a structure type called `address_t` that has four integers (A, B, C, and D respectively)  
+and stores a hostname (string).  Create a second structure called `dns_t` that will create an  
+array of `25` `address_t` types. 
+
+Below is a list of functions you will implement.  Your main function should allow a user to pick  
+which function to perform - you can use a switch statement or if statements to implement the menu  
+selection.  You program should continue asking the user for an action to perform unless a program  
+termination condition is entered (such as `q` for quit).
+
+### Goal Post 2 (25%):
+`scan_file` - Read in from [`data.txt`](./data.txt), which contains a list of no more than 25 IP addresses and  
+nicknames.  The ending / terminating line in `data.txt` wil be an address of 0.0.0.0 and a hostname  
+of `none`.
+
+### Goal Post 3 (25%):
+`find_hostname` - Print out the hostname based on a user given IP address.  If the IP does not exist,  
+it should print a message that states `IP not in data file`.  You may assume that no IP will be repeated  
+twice, so you do not need to continue searching one the first instance is found.
+
+### Goal Post 4 (25%):
+`find_ip` - Print out the IP address based on a user given hostname.  If the hostname does not exist,  
+it should print a message that states `Hostname not in data file`.  You may assume that no hostname  
+will be repeated twice, so you do not need to continue searching one the first instance is found.
 
 ### Sample execution:
 ```
+Welcome to the IPv4 lookup.  
+s - scan a data file
+h - find a hostname associated with an IP address
+i - find an ip address associated with a hostname
+p - print hostnames associated with a subnet
+q - end program
+Pick something to do: s
+Data scanned.
+Pick something to do: i
+Enter a hostname: bob
+The hostname bob matches IP 130.108.14.1
+Pick something to do: q
+Goodbye!
 
 ```
-## Goal Posts:
-These are hints on how to break down the problem above rather than code everything at once.  The  
-successful implementation of each goal post will get you the corresponding points.  
-
-### Goal Post 1 (25%):
-
-### Goal Post 2 (25%):
-
-### Goal Post 3 (25%):
-
-### Goal Post 4 (25%):
 
 ## Extra Credit (10%):
-Add to your program the ability for a game master to enter a word for a user to guess.  You program  
-should now be able to use a default (hard coded) word or a word entered by a game master.  You can  
-use a switch case or if statement to let the user select which mode to play the game in.
+`print_subnet_d_hosts` - Prints the hostnames that are on the same D subnet based on a given user  
+subnet.  For the sample user input `110.115.25.0` this function should print all hostnames that start  
+with `110.115.25`.  If none exist, prints a message that states `No hostnames on that subnet`.
 
 ## What to Submit
 You should have a folder named Lab08-LastName.  
