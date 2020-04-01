@@ -1,38 +1,7 @@
-#include <stdio.h>
-#include <math.h>
-#include <string.h>
 
-#define MAX_NAME 20
+#include "header.h"
 
-typedef struct {
-    char name[MAX_NAME];
-    double diameter, orbit_time, rotation_time;
-    int moons;
-} planet_t;
-//to initialize the type when creating a new variable:
-//  planet_t new_planet
 
-struct planet_t {
-    char name[MAX_NAME];
-    double diameter, orbit_time, rotation_time;
-    int moons;
-};
-//to initialize the type when creating a new variable, I now need to say:
-//  struct planet_t new_planet
-
-struct planet_t {
-    char name[MAX_NAME];
-    double diameter, orbit_time, rotation_time;
-    int moons;
-} planet_new, planet_old;
-//pre-initialize of variables that are of type planet_t
-//  planet_new and planet_old can now be used in any function including main
-
-typedef struct{
-    double diameter;
-    planet_t planets [9];
-    char name[MAX_NAME];
-} solar_sys_t;
 
 int main (void){
     int num;
@@ -49,16 +18,3 @@ int main (void){
     //planets;
     return 0;
 }
-
-
-
-
-/*
-
-
-typedef struct {
-    char name[MAX_NAME];
-    //planet_t[9];
-    double diameter;
-} solar_sys_t;*/
-
