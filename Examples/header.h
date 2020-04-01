@@ -2,7 +2,11 @@
 #include <math.h>
 #include <string.h>
 
+#include "file_function.c"
+
 #define MAX_NAME 20
+//prototype functions from file_function.c
+void print_num(int);
 
 typedef struct {
     char name[MAX_NAME];
