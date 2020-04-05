@@ -1,4 +1,22 @@
-#include "header.h"
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+#define MAX_NAME 20
+//prototype functions from file_function.c
+void print_num(int);
+
+typedef struct {
+    char name[MAX_NAME];
+    double diameter, orbit_time, rotation_time;
+    int moons;
+} planet_t;
+
+typedef struct{
+    double diameter;
+    planet_t planets [9];
+    char name[MAX_NAME];
+} solar_sys_t;
 /*****
  * How to use a header file (header.h)
  * For each file you want to use the header, type #include "header_file_name.h" 

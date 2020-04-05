@@ -1,4 +1,7 @@
-#include "header.h"
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
 /*****
  * How to use a header file (header.h)
  * For each file you want to use the header, type #include "header_file_name.h" 
