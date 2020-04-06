@@ -1,61 +1,78 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#define MAX_MODEL_NAME 20
 
-#define MAX_NAME_SIZE 15
-
-//structures based on my data / problem statement
-// sample line of input from data file: 3032,88,58,0 Mercury
+/*Write a structure called bike_t that would store the following: the model name of bicycle, the number of wheels, the number of pedals, and the size of the wheels.
+*/
 typedef struct {
-    double diameter, orbit_time, rotation_time;
-    int moons;
-    char name[MAX_NAME_SIZE];
-}planet_info_t;
+    char model[MAX_MODEL_NAME];
+    int wheels;
+    int pedals;
+    double wheel_size;
+} bike_t;
+
+//I have a variable student of type student_t with the following variables: name, uid, and gpa.  How do I put a gpa value of 3.4 in student?
+typedef struct {
+    char name[MAX_MODEL_NAME];
+    int uid;
+    double gpa;
+} student_t;
+
+//The structure variable earth of type world_t has been passed to a function as a pointer.  List one way to access the ocean variable inside world.
 
 typedef struct {
-    planet_info_t planet[5];
-} solar_system_t;
+    double ocean;
+}world_t;
 
-//solar_system_t scan_file(void);
-int scan_file(solar_system_t *);
+//set_gpa
+void set_gpa (student_t , double);
+void print_ocean (world_t *);
+
 
 int main (void){
-    //int num;
-    //print_num(40);
-    //planet_info_t planet;
-    solar_system_t s;
-    //setup structures for the problem - DONE
-    //setup file input
-    int result = scan_file(&s);
-    if (result == 0){
-        printf("Terminating line found, file good.");
-    }
-    else {
-        printf("Maybe problem?");
-    }
-    printf("\n%s\n",s.planet[2].name);
-    
-    
+    double num = 0.0;
+    double *nump;
+    nump = &num;
+    *nump = 7.8;
+    printf("\n%lf\n", num);
+
+    bike_t bike;
+    bike.pedals = 4;
+    //bike_t bobs_bike;
+    //bobs_bike.pedals = 8;
+    bike_t *bikep;
+    bikep = &bike;
+    (*bikep).pedals = 12;
+    bikep->pedals = 12;
+    printf("\n Pedals is now: %d \n", bike.pedals);
+    printf("\n Pedals is now: %d \n", bikep->pedals);
+
+    strcpy(bike.model, "Kona");
+
+    student_t student;
+    student.gpa = 0.0;
+    set_gpa(student,3.4);
+    printf("Student GPA is now: %lf", student.gpa);
+
+
+    world_t earth;
+    print_ocean(&earth);
+
     return 0;
 }
 
-int scan_file(solar_system_t *solar){
-    FILE *inputp;
-    inputp = fopen("data.txt","r");
-    //scan file input
-    for (int i = 0; i < 5; i++){
-        fscanf(inputp, "%lf,%lf,%lf,%d %s", &solar->planet[i].diameter, &(*solar).planet[i].orbit_time, 
-        &solar->planet[i].rotation_time, &solar->planet[i].moons, solar->planet[i].name);
-
-        if (solar->planet[i].diameter == 0 && solar->planet[i].orbit_time == 0 && 
-        solar->planet[i].rotation_time == 0 && solar->planet[i].moons == 0 && 
-        strcmp(solar->planet[i].name, "done") == 0) {
-            printf("\nTerminating line found!\n");
-            return 0;
-        }
-
-        printf("From the file, I got: %lf,%lf,%lf,%d %s\n", solar->planet[i].diameter, solar->planet[i].orbit_time, 
-        solar->planet[i].rotation_time, solar->planet[i].moons, solar->planet[i].name);    
-    }
-    return 1;
+void print_ocean(world_t *earth){
+    printf("\nMy ocean is: %lf\n", (*earth).ocean);
+    printf("\nMy ocean is: %lf\n", earth->ocean);
+    scanf("%lf", &(*earth).ocean);
+    return;
 }
+
+void set_gpa (student_t s, double gpa){
+    s.gpa = gpa;
+    printf("Student GPA is now: %lf", s.gpa);
+    return;
+}
+
+

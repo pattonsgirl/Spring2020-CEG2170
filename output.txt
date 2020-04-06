@@ -1,3 +1,0 @@
-The out was 314.159000
- the inner was 95.033097
-     ring area is 219.125903
