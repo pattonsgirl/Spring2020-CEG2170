@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string.h>
 #define MAX_MODEL_NAME 20
+#define MAX_BIKES 10
 
 /*Write a structure called bike_t that would store the following: the model name of bicycle, the number of wheels, the number of pedals, and the size of the wheels.
 */
@@ -9,34 +10,19 @@ typedef struct {
     char model[MAX_MODEL_NAME];
     int wheels;
     int pedals;
-    double wheel_size;
+    int wheel_size;
 } bike_t;
 
-//I have a variable student of type student_t with the following variables: name, uid, and gpa.  How do I put a gpa value of 3.4 in student?
 typedef struct {
-    char name[MAX_MODEL_NAME];
-    int uid;
-    double gpa;
-} student_t;
+    bike_t bikes[MAX_BIKES];
+    char cool_name[20];
+    int pints_of_ice_cream;
+} fleet_t;
 
-//The structure variable earth of type world_t has been passed to a function as a pointer.  List one way to access the ocean variable inside world.
-
-typedef struct {
-    double ocean;
-}world_t;
-
-//set_gpa
-void set_gpa (student_t , double);
-void print_ocean (world_t *);
-
+//prototype
+int scan_file(fleet_t *);
 
 int main (void){
-    double num = 0.0;
-    double *nump;
-    nump = &num;
-    *nump = 7.8;
-    printf("\n%lf\n", num);
-
     bike_t bike;
     bike.pedals = 4;
     //bike_t bobs_bike;
@@ -47,32 +33,43 @@ int main (void){
     bikep->pedals = 12;
     printf("\n Pedals is now: %d \n", bike.pedals);
     printf("\n Pedals is now: %d \n", bikep->pedals);
+    //scanf("%d", &bikep->pedals);
 
     strcpy(bike.model, "Kona");
 
-    student_t student;
-    student.gpa = 0.0;
-    set_gpa(student,3.4);
-    printf("Student GPA is now: %lf", student.gpa);
-
-
-    world_t earth;
-    print_ocean(&earth);
+    //make a fleet
+    fleet_t fleet;
+    fleet.bikes[0].pedals = 22;
+    fleet_t *fleet_p;
+    fleet_p = &fleet;
+    fleet_p->bikes[0].pedals = 33;
+    int lines_read;
+    //lines_read = scan_file(fleet_p);
+    lines_read = scan_file(&fleet);
 
     return 0;
 }
 
-void print_ocean(world_t *earth){
-    printf("\nMy ocean is: %lf\n", (*earth).ocean);
-    printf("\nMy ocean is: %lf\n", earth->ocean);
-    scanf("%lf", &(*earth).ocean);
-    return;
+int scan_file(fleet_t *f){
+    FILE *inputp;
+    inputp = fopen("data.txt","r");
+    int i;
+    //2,3,27 Sutra
+    for (i = 0; i < MAX_BIKES; i++){
+        fscanf(inputp, "%d,%d,%d %s", &f->bikes[i].pedals, &f->bikes[i].wheels, 
+        &f->bikes[i].wheel_size, f->bikes[i].model);
+        //terminating condition = model name = fin
+        int condition = strcmp(f->bikes[i].model, "fin");
+        //I could then use condition == 0
+        if (strcmp(f->bikes[i].model, "fin") == 0){
+            printf("\nFound end of data / terminating condition\n");
+            break;
+        }
+        printf("\nI read in: %d,%d,%d %s\n", f->bikes[i].pedals, f->bikes[i].wheels, 
+        f->bikes[i].wheel_size, f->bikes[i].model);
+    }  
+    printf("%d",i);
+    //you can now use i for a loop counter / loop max in your search functions
+    return i;
 }
-
-void set_gpa (student_t s, double gpa){
-    s.gpa = gpa;
-    printf("Student GPA is now: %lf", s.gpa);
-    return;
-}
-
 
