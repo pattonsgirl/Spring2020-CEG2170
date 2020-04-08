@@ -33,32 +33,70 @@ AAA.BBB.CCC.DDD
 ```
 Where each letter represents a sectioned "subnet".  Computers also have an associated hostname.  
 For fun, you can find out your computer's hostname by opening a terminal and typing `hostname`.  
-You are going to write a program that identifies which computers are on the same class of subnet.  
+You are going to write a program that with a series of functions that perform actions based on this data.  
 
 ### Goal Post 1 (25%):
 Create a structure type called `address_t` that has four integers (A, B, C, and D respectively)  
-and stores a hostname (string).  Create a second structure called `dns_t` that will create an  
-array of `25` `address_t` types. 
+and stores a hostname (string).  
+
+Create a second structure called `dns_t` that will create an array of `25` `address_t` types. 
 
 Below is a list of functions you will implement.  Your main function should allow a user to pick  
 which function to perform - you can use a switch statement or if statements to implement the menu  
 selection.  You program should continue asking the user for an action to perform unless a program  
 termination condition is entered (such as `q` for quit).
+```
+Sample menu:
+Welcome to the IPv4 lookup.  
+s - scan a data file
+h - find a hostname associated with an IP address
+i - find an ip address associated with a hostname
+p - print hostnames associated with a subnet
+q - end program
+```
 
 ### Goal Post 2 (25%):
 `scan_file` - Read in from [`data.txt`](./data.txt), which contains a list of no more than 25 IP addresses and  
-nicknames.  The ending / terminating line in `data.txt` wil be an address of 0.0.0.0 and a hostname  
+nicknames.  The ending / terminating line in `data.txt` wil be an address of `0.0.0.0` and a hostname  
 of `none`.
+```
+Function protypes (recommendations):
+void scan_file (dns_t *); //scan_file function that only populates a structure of type dns_t
+OR
+int scan_file (dns_t *); //scan_file function that populates a structure of type dns_t & returns an int
+//Recommendation: return an int of how many valid lines you read so you don't search
+//  through array elements that were not populated by valid data
+```
 
 ### Goal Post 3 (25%):
+`find_ip` - Print out the IP address based on a user given hostname.  If the hostname does not exist,  
+it should print a message that states `Hostname not in data file`.  You may assume that no hostname  
+will be repeated twice, so you do not need to continue searching one the first instance is found.
+
+You may prompt the user for the hostname within the function OR within main and then pass the search  
+value to the function.
+```
+Function protypes (recommendations) - you can pass a pointer if you want:
+void find_ip (dns_t); //Only dns_t structure is input parameter - user is prompted for input in the function
+OR
+void find_ip (dns_t, char []); //User is prompted for input in main (or elsewhere)
+OR 
+void find_ip (dns_t, int); //dns_t structure is passed as well as valid data value to constrict search space
+```
+
+### Goal Post 4 (25%):
 `find_hostname` - Print out the hostname based on a user given IP address.  If the IP does not exist,  
 it should print a message that states `IP not in data file`.  You may assume that no IP will be repeated  
 twice, so you do not need to continue searching one the first instance is found.
 
-### Goal Post 4 (25%):
-`find_ip` - Print out the IP address based on a user given hostname.  If the hostname does not exist,  
-it should print a message that states `Hostname not in data file`.  You may assume that no hostname  
-will be repeated twice, so you do not need to continue searching one the first instance is found.
+```
+Function protypes (recommendations) - you can pass a pointer if you want:
+void find_hostname (dns_t); //Only dns_t structure is input parameter - user is prompted for input in the function
+OR
+void find_hostname (dns_t, int, int, int, int); //User is prompted for input in main (or elsewhere)
+OR 
+void find_hostname (dns_t, int); //dns_t structure is passed as well as valid data value to constrict search space
+```
 
 ### Sample execution:
 ```
