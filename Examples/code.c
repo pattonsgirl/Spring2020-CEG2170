@@ -56,7 +56,8 @@ void info_search (fleet_t f, int valid_lines){
     char seek_me [15] = "Sutra";
     int seek_pedals = 4;
     //int success = 0;
-    for (int i = 0; i < valid_lines; i++){
+    int i = 0;
+    while ( i < valid_lines){
         printf("%s", f.bikes[i].model);
         if (f.bikes[i].pedals == seek_pedals){
         //if(strcmp(f.bikes[i].model, seek_me) == 0){
@@ -64,6 +65,7 @@ void info_search (fleet_t f, int valid_lines){
             printf("Found it!  Number of pedals is: %d\n", f.bikes[i].pedals);
             return;
         }
+        i++;
     }
     // error not found
     return;
@@ -73,7 +75,12 @@ int scan_file(fleet_t *f){
     FILE *inputp;
     inputp = fopen("data.txt","r");
     int i;
-    //2,3,27 Sutra
+    char info[25] = "2,3,27 Sutra";
+    int p,w,ws;
+    char name[15];
+    //I'm manually creating a string, you could ask the user for a string
+    sscan(info, "%d,%d,%d %s", &p, &w, &ws, name);
+
     for (i = 0; i < MAX_BIKES; i++){
         fscanf(inputp, "%d,%d,%d %s", &f->bikes[i].pedals, &f->bikes[i].wheels, 
         &f->bikes[i].wheel_size, f->bikes[i].model);
