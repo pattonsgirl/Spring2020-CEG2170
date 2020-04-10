@@ -21,6 +21,7 @@ typedef struct {
 
 //prototype
 int scan_file(fleet_t *);
+void info_search (fleet_t, int);
 
 int main (void){
     bike_t bike;
@@ -46,8 +47,26 @@ int main (void){
     int lines_read;
     //lines_read = scan_file(fleet_p);
     lines_read = scan_file(&fleet);
+    info_search(fleet, lines_read);
 
     return 0;
+}
+
+void info_search (fleet_t f, int valid_lines){
+    char seek_me [15] = "Sutra";
+    int seek_pedals = 4;
+    //int success = 0;
+    for (int i = 0; i < valid_lines; i++){
+        printf("%s", f.bikes[i].model);
+        if (f.bikes[i].pedals == seek_pedals){
+        //if(strcmp(f.bikes[i].model, seek_me) == 0){
+            printf("\nSUCCESS\n");
+            printf("Found it!  Number of pedals is: %d\n", f.bikes[i].pedals);
+            return;
+        }
+    }
+    // error not found
+    return;
 }
 
 int scan_file(fleet_t *f){
