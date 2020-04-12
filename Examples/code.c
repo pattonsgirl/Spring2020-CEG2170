@@ -6,6 +6,24 @@
 
 /*Write a structure called bike_t that would store the following: the model name of bicycle, the number of wheels, the number of pedals, and the size of the wheels.
 */
+
+typedef struct {
+    char hostname[15];
+    int A,B,C,D;
+} address_t;
+
+typedef struct {
+    address_t ip_name [25];
+} dns_t;
+/*
+Full answer:
+char text [30] = "3.5/8/43.9 Garden"
+sscanf(text, "%lf/%lf/%lf %s", &length, &width, &depth, name);
+
+student.name = "bob"; OR strcpy(student.name, "bob");
+student.uid = 50678;
+student.gpa = 4.2;
+*/
 typedef struct {
     char model[MAX_MODEL_NAME];
     int wheels;

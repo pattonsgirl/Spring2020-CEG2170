@@ -1,4 +1,4 @@
-# Lab 09 - NOT FINALIZED
+# Lab 10 - EXTRA CREDIT - NOT FINALIZED
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ You will now have a folder named Template that contains:
 * Makefile
 
 Folder structure:
-* Create a folder named Lab09-Lastname.
+* Create a folder named Lab10-Lastname.
 
 In Visual Studio Code, go to File, Open Folder, and open the folder corresponding to which part of  
 this lab your are working on.
@@ -27,7 +27,7 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 
 This link to [Structures in C](https://www.geeksforgeeks.org/structures-c/) and [Files in C](https://www.geeksforgeeks.org/basics-file-handling-c/) are good resources for this lab.
 
-## My Manual DNS (Domain Name Server)
+## My Linked List DNS (Domain Name Server)
 IPv4 internet addresses are of the form:
 ```
 AAA.BBB.CCC.DDD
@@ -38,9 +38,9 @@ You are going to write a program that with a series of functions that perform ac
 
 **You may only use linked lists (dynamic memory allocation with pointers) for this extra credit opportunity**
 
-### Goal Post 1 (25%):
+### Brownie Points Earned (20%):
 Create a structure type called `address_t` that has four integers (A, B, C, and D respectively),  
-stores a hostname (string), and stores the address to the next `address_t`  
+stores a hostname (string), and stores the address to the next `address_t` in a linked list. 
 
 Below is a list of functions you will implement.  Your main function should allow a user to pick  
 which function to perform - you can use a switch statement or if statements to implement the menu  
@@ -50,84 +50,63 @@ termination condition is entered (such as `q` for quit).
 Sample menu:
 Welcome to the IPv4 lookup.  
 s - scan a data file
-h - find a hostname associated with an IP address
-i - find an ip address associated with a hostname
-p - print hostnames associated with a subnet
+i - find an ip address based on a hostname
+a - add an ip address and hostname
+p - print the dns list to a file called updated-data.txt
 q - end program
 ```
 
-### Goal Post 2 (25%):
+### Brownie Points Earned (20%):
 `scan_file` - Read in from [`data.txt`](./data.txt), which contains a list of no more than 25 IP addresses and  
 nicknames.  The ending / terminating line in `data.txt` wil be an address of `0.0.0.0` and a hostname  
-of `none`.
-```
-Function protypes (recommendations):
-void scan_file (dns_t *); //scan_file function that only populates a structure of type dns_t
-OR
-int scan_file (dns_t *); //scan_file function that populates a structure of type dns_t & returns an int
-//Recommendation: return an int of how many valid lines you read so you don't search
-//  through array elements that were not populated by valid data
-```
+of `none`.  This should be associated with user input `s`
 
-### Goal Post 3 (25%):
+### Brownie Points Earned (20%):
 `find_ip` - Print out the IP address based on a user given hostname.  If the hostname does not exist,  
 it should print a message that states `Hostname not in data file`.  You may assume that no hostname  
-will be repeated twice, so you do not need to continue searching one the first instance is found.
+will be repeated twice, so you do not need to continue searching one the first instance is found.  
+This should be associated with the user input `i`.
 
 You may prompt the user for the hostname within the function OR within main and then pass the search  
 value to the function.
-```
-Function protypes (recommendations) - you can pass a pointer if you want:
-void find_ip (dns_t); //Only dns_t structure is input parameter - user is prompted for input in the function
-OR
-void find_ip (dns_t, char []); //User is prompted for input in main (or elsewhere)
-OR 
-void find_ip (dns_t, int); //dns_t structure is passed as well as valid data value to constrict search space
-```
 
-### Goal Post 4 (25%):
-`find_hostname` - Print out the hostname based on a user given IP address.  If the IP does not exist,  
-it should print a message that states `IP not in data file`.  You may assume that no IP will be repeated  
-twice, so you do not need to continue searching one the first instance is found.
+### Brownie Points Earned (20%):
+`add_ip` - Add an address and hostname to the **end** of the linked list.  This should be associated with user input `a`.
 
-```
-Function protypes (recommendations) - you can pass a pointer if you want:
-void find_hostname (dns_t); //Only dns_t structure is input parameter - user is prompted for input in the function
-OR
-void find_hostname (dns_t, int, int, int, int); //User is prompted for input in main (or elsewhere)
-OR 
-void find_hostname (dns_t, int); //dns_t structure is passed as well as valid data value to constrict search space
-```
+### Brownie Points Earned (20%):
+`print_list` - Prints the linked list to a file called `updated-data.txt`.  Data should be printed in the exact  
+same format as the original data file.  This should be associated with user input `p`.
 
 ### Sample execution:
 ```
+Sample menu:
 Welcome to the IPv4 lookup.  
 s - scan a data file
-h - find a hostname associated with an IP address
-i - find an ip address associated with a hostname
-p - print hostnames associated with a subnet
+i - find an ip address based on a hostname
+a - add an ip address and hostname
+p - print the dns list to a file called updated-data.txt
 q - end program
 Pick something to do: s
 Data scanned.
 Pick something to do: i
 Enter a hostname: bob
-The hostname bob matches IP 130.109.14.1
+The hostname bob matches IP 130.110.14.1
+Pick something to do: a
+Enter the new IP address: 130.108.45.23
+Enter the new hostname: sue
+Pick something to do: p
+Data printed to updated-data.txt
 Pick something to do: q
 Goodbye!
 
 ```
 
-## Extra Credit (10%):
-`print_subnet_d_hosts` - Prints the hostnames that are on the same D subnet based on a given user  
-subnet.  For the sample user input `110.115.25.0` this function should print all hostnames that start  
-with `110.115.25`.  If none exist, prints a message that states `No hostnames on that subnet`.
-
 ## What to Submit
-You should have a folder named Lab09-LastName.  
+You should have a folder named Lab10-LastName.  
 The folder should have at least the following:
 * name_of_your_code.c  
 
-Create a .zip file of your project folder (Lab09-LastName.zip)
+Create a .zip file of your project folder (Lab10-LastName.zip)
 
 Windows:
 1. Choose the folder you'd like to zip.
