@@ -1,4 +1,4 @@
-# Lab 09 - NOT FINALIZED
+# Lab 09
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ The file path should be your project folder by default.
 Type `make run` - this will compile and run your code file.  
 If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](https://github.com/pattonsgirl/Spring2020-CEG2170)
 
-This link to [Structures in C](https://www.geeksforgeeks.org/structures-c/) and [Files in C](https://www.geeksforgeeks.org/basics-file-handling-c/) are good resources for this lab.
+This link to [Linked List Introduction](https://www.geeksforgeeks.org/linked-list-set-1-introduction/), [Singly Linked Lists](https://www.hackerearth.com/practice/data-structures/linked-list/singly-linked-list/tutorial/), and [Files in C](https://www.geeksforgeeks.org/basics-file-handling-c/) are good resources for this lab.
 
 ## Linked List Basics
   
