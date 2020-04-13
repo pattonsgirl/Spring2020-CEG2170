@@ -27,20 +27,12 @@ If it fails, see the Troubleshooting Guide in [Setting Up Your Environment](http
 
 This link to [Structures in C](https://www.geeksforgeeks.org/structures-c/) and [Files in C](https://www.geeksforgeeks.org/basics-file-handling-c/) are good resources for this lab.
 
-## My Manual DNS (Domain Name Server)
-IPv4 internet addresses are of the form:
-```
-AAA.BBB.CCC.DDD
-```
-Where each letter represents a sectioned "subnet".  Computers also have an associated hostname.  
-For fun, you can find out your computer's hostname by opening a terminal and typing `hostname`.  
-You are going to write a program that with a series of functions that perform actions based on this data.  
-
-**You may only use linked lists (dynamic memory allocation with pointers) for this extra credit opportunity**
+## Linked List Basics
+  
 
 ### Goal Post 1 (25%):
-Create a structure type called `address_t` that has four integers (A, B, C, and D respectively),  
-stores a hostname (string), and stores the address to the next `address_t`  
+Create a structure type called `num_t` that holds a single integer and stores the address to the  
+next `num_t`  
 
 Below is a list of functions you will implement.  Your main function should allow a user to pick  
 which function to perform - you can use a switch statement or if statements to implement the menu  
@@ -48,79 +40,85 @@ selection.  You program should continue asking the user for an action to perform
 termination condition is entered (such as `q` for quit).
 ```
 Sample menu:
-Welcome to the IPv4 lookup.  
-s - scan a data file
-h - find a hostname associated with an IP address
-i - find an ip address associated with a hostname
-p - print hostnames associated with a subnet
+Linked List Menu:  
+f - find how many of a number exists
+i - insert a number
+p - print the numbers
 q - end program
 ```
-
-### Goal Post 2 (25%):
-`scan_file` - Read in from [`data.txt`](./data.txt), which contains a list of no more than 25 IP addresses and  
-nicknames.  The ending / terminating line in `data.txt` wil be an address of `0.0.0.0` and a hostname  
-of `none`.
+Initialize your linked list with values in an array.  Utilize the example we will discuss in class  
+or use another method if you wish.
 ```
-Function protypes (recommendations):
-void scan_file (dns_t *); //scan_file function that only populates a structure of type dns_t
-OR
-int scan_file (dns_t *); //scan_file function that populates a structure of type dns_t & returns an int
-//Recommendation: return an int of how many valid lines you read so you don't search
-//  through array elements that were not populated by valid data
+//Array example:
+int num_array[] = {8, 10, 16, 90, 42, 21, 8};
 ```
 
-### Goal Post 3 (25%):
-`find_ip` - Print out the IP address based on a user given hostname.  If the hostname does not exist,  
-it should print a message that states `Hostname not in data file`.  You may assume that no hostname  
-will be repeated twice, so you do not need to continue searching one the first instance is found.
+### Goal Post 2 (15%):
+`print_list` - Prints all values in the list.
+```
+//Function prototype:
+void print_list (num_t *headp);
+```
 
-You may prompt the user for the hostname within the function OR within main and then pass the search  
-value to the function.
-```
-Function protypes (recommendations) - you can pass a pointer if you want:
-void find_ip (dns_t); //Only dns_t structure is input parameter - user is prompted for input in the function
-OR
-void find_ip (dns_t, char []); //User is prompted for input in main (or elsewhere)
-OR 
-void find_ip (dns_t, int); //dns_t structure is passed as well as valid data value to constrict search space
-```
+### Goal Post 3 (10%):
+If `q` is selected by the user, `free` each node in the list.  
+
+You may do this in a separate function OR within main.
 
 ### Goal Post 4 (25%):
-`find_hostname` - Print out the hostname based on a user given IP address.  If the IP does not exist,  
-it should print a message that states `IP not in data file`.  You may assume that no IP will be repeated  
-twice, so you do not need to continue searching one the first instance is found.
+`find_num` - Searches through the linked list for the user specified number and counts how many  
+instances of the number were found.
 
+You may prompt the user for the number to search for within the function OR within main and then  
+pass the search value to the function.
 ```
-Function protypes (recommendations) - you can pass a pointer if you want:
-void find_hostname (dns_t); //Only dns_t structure is input parameter - user is prompted for input in the function
-OR
-void find_hostname (dns_t, int, int, int, int); //User is prompted for input in main (or elsewhere)
-OR 
-void find_hostname (dns_t, int); //dns_t structure is passed as well as valid data value to constrict search space
+//Function prototype:
+void find_num (num_t *headp);
+```
+
+### Goal Post 5 (25%):
+`insert_num` - Adds a user specified number to the end of the list.
+
+You may prompt the user for the number to add within the function OR within main and then pass  
+the value to the function.
+```
+//Function prototype:
+void insert_num (num_t *headp);
 ```
 
 ### Sample execution:
 ```
-Welcome to the IPv4 lookup.  
-s - scan a data file
-h - find a hostname associated with an IP address
-i - find an ip address associated with a hostname
-p - print hostnames associated with a subnet
+Linked List Menu:  
+f - find how many of a number exists
+i - insert a number
+p - print the numbers
 q - end program
-Pick something to do: s
-Data scanned.
+Pick something to do: p
+Numbers in list are: 8, 10, 16, 90, 42, 21, 8
+Pick something to do: f
+Enter a number: 15
+15 is not in the list
+Pick something to do: f
+Enter a number: 8
+8 was found 2 time(s).
 Pick something to do: i
-Enter a hostname: bob
-The hostname bob matches IP 130.109.14.1
+Enter new number: 8
+8 has been added to the list
+Pick something to do: f
+Enter a number: 8
+8 was found 3 time(s).
 Pick something to do: q
-Goodbye!
-
+List of numbers has been safely deleted from the heap.
+Goodbye.
 ```
 
-## Extra Credit (10%):
-`print_subnet_d_hosts` - Prints the hostnames that are on the same D subnet based on a given user  
-subnet.  For the sample user input `110.115.25.0` this function should print all hostnames that start  
-with `110.115.25`.  If none exist, prints a message that states `No hostnames on that subnet`.
+## Extra Credit (Up to 20%):
+Implement an additional menu option of either:
+```
+e - enter data manually
+s - scan a data file
+```
+Each is worth 10% of additional credit.
 
 ## What to Submit
 You should have a folder named Lab09-LastName.  

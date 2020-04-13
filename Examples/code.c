@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h> // to get malloc, calloc, free, and realloc
 #include <math.h>
 #include <string.h>
 #define MAX_MODEL_NAME 20
@@ -42,6 +43,7 @@ int scan_file(fleet_t *);
 void info_search (fleet_t, int);
 
 int main (void){
+    
     bike_t bike;
     bike.pedals = 4;
     //bike_t bobs_bike;
@@ -50,7 +52,7 @@ int main (void){
     bikep = &bike;
     (*bikep).pedals = 12;
     bikep->pedals = 12;
-    printf("\n Pedals is now: %d \n", bike.pedals);
+    //printf("\n Pedals is now: %d \n", bike.pedals);
     printf("\n Pedals is now: %d \n", bikep->pedals);
     //scanf("%d", &bikep->pedals);
 
@@ -71,7 +73,7 @@ int main (void){
 }
 
 void info_search (fleet_t f, int valid_lines){
-    char seek_me [15] = "Sutra";
+    //char seek_me [15] = "Sutra";
     int seek_pedals = 4;
     //int success = 0;
     int i = 0;
@@ -97,20 +99,20 @@ int scan_file(fleet_t *f){
     int p,w,ws;
     char name[15];
     //I'm manually creating a string, you could ask the user for a string
-    sscan(info, "%d,%d,%d %s", &p, &w, &ws, name);
+    sscanf(info, "%d,%d,%d %s", &p, &w, &ws, name);
 
     for (i = 0; i < MAX_BIKES; i++){
         fscanf(inputp, "%d,%d,%d %s", &f->bikes[i].pedals, &f->bikes[i].wheels, 
         &f->bikes[i].wheel_size, f->bikes[i].model);
         //terminating condition = model name = fin
-        int condition = strcmp(f->bikes[i].model, "fin");
+      //  int condition = strcmp(f->bikes[i].model, "fin");
         //I could then use condition == 0
         if (strcmp(f->bikes[i].model, "fin") == 0){
             printf("\nFound end of data / terminating condition\n");
             break;
         }
-        printf("\nI read in: %d,%d,%d %s\n", f->bikes[i].pedals, f->bikes[i].wheels, 
-        f->bikes[i].wheel_size, f->bikes[i].model);
+        /*printf("\nI read in: %d,%d,%d %s\n", f->bikes[i].pedals, f->bikes[i].wheels, 
+        f->bikes[i].wheel_size, f->bikes[i].model);*/
     }  
     printf("%d",i);
     //you can now use i for a loop counter / loop max in your search functions
