@@ -61,7 +61,7 @@ void print_list (num_t *headp);
 ```
 
 ### Goal Post 3 (10%):
-If `q` is selected by the user, `free` each node in the list.  
+If `q` is selected by the user, `free` each node in the list.  `q` should also exit the program.
 
 You may do this in a separate function OR within main.
 
