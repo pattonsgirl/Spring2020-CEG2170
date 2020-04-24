@@ -19,7 +19,7 @@
         * only for strings
     * sscanf to parse a string
     * strcmp - no alphabeticalness
-        * if identical - returns , need to make sure to check the return value of strcmp
+        * if identical - returns 0, need to make sure to check the return value of strcmp
         * if (strcmp("banana", "banana") == 0) { stuff can happen }
         * if (strcmp("banana", "apple") == 0) { stuff won't happen }
 * structures
